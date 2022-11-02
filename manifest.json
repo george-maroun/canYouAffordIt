@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Can you afford it?",
+    "version": "1.0",
+    "permissions": ["scripting"],
+    "content_scripts": [
+        {
+          "matches": ["http://*/*"],
+          "js": ["jquery.min.js", "./main.js"],
+          "css": ["index.css"]
+        }
+    ]
+}
