@@ -7,25 +7,28 @@
 // message.addClass('beautText');
 // var myImg;
 
-// $.ajax({
-//     method: 'GET',
-//     url: 'https://picsum.photos/list',
-//     success: function(result) {
-//      // result is whatever the URL sends back from the request
-//      var random = Math.floor(Math.random() * 1000);
-//      var myURL = "https://unsplash.it/1200/800?image=" + result[random]["id"];
+$.ajax({
+    method: 'GET',
+    url: 'https://picsum.photos/list',
+    success: function(result) {
+     // result is whatever the URL sends back from the request
+     var random = Math.floor(Math.random() * 1000);
+     var myURL = "https://unsplash.it/1200/800?image=" + result[random]["id"];
 
-//      document.getElementById('theImg').src = myURL;
-//     },
-//     error: function(err) {
-//      console.log('err');
-//     }
-//   });
+     document.getElementById('theImg').src = myURL;
+    },
+    error: function(err) {
+     console.log('err');
+    }
+  });
+
+let count = 0;
 
 const shopping = $("[id$='shopping']");
 // const cart =  $("[id*='cart']");
 if (shopping[0]) alert('worked shopping')
-const cart = $("[id*='hplo']");
+const cartid = $("[id*='hplo']");
+const cartClass = $("[id*='hplo']");
 // const cart =  $("[id*='cart']");
 if (cart[0]) alert('worked hplogo')
 
@@ -41,7 +44,7 @@ function displayPopUp() {
   const question = document.createElement('div');
   popUp.appendChild(question);
   question.classList.add('question');
-  question.innerHTML = "are you sure?"
+  question.innerHTML = "Are you here to shop?"
   
   const buttons = document.createElement('div');
   buttons.classList.add('buttons');
@@ -52,8 +55,20 @@ function displayPopUp() {
   yesButton.classList.add('yesButton');
   noButton.classList.add('noButton');
   noButton.innerHTML = "NO";
-  noButton.href = "https://www.nerdwallet.com/article/finance/how-to-save-money";
   yesButton.innerHTML = "YES";
+  //yesButton.href = "https://www.nerdwallet.com/article/finance/how-to-save-money";
+  
+  yesButton.addEventListener('click', () => {
+    if (count < 1) {
+      question.innerHTML = "are you sure?"
+      count++;
+    }
+    else {
+      window.location.replace("https://www.nerdwallet.com/article/finance/how-to-save-money");
+    }
+  })
+
+
   buttons.appendChild(yesButton);
   buttons.appendChild(noButton);
 
