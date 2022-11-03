@@ -62,14 +62,10 @@ function displayPopUp() {
   
   yesButton.addEventListener('click', () => {
     if (count < 1) {
-      question.innerHTML = "Are you sure?"
+      question.innerHTML = "Can you afford it?"
       count++;
     }
     else if (count === 1) {
-      question.innerHTML = "Can you afford it?";
-      count++;
-    }
-    else if (count === 2) {
       question.innerHTML = "Can you pay off your credit card?";
       count++;
     }
@@ -81,7 +77,15 @@ function displayPopUp() {
   })
 
   noButton.addEventListener('click', () => {
-    window.location.replace("https://www.nerdwallet.com/article/finance/how-to-save-money");
+    if (count < 1) {
+      question.innerHTML = "What are you doing here??"
+      buttons.innerHTML ='';
+      count++;
+    }
+    else {
+      window.location.replace("https://www.nerdwallet.com/article/finance/how-to-save-money");
+    }
+    
   })
 
 
