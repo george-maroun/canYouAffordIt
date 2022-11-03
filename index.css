@@ -7,21 +7,27 @@
 
 .pop-up {
   position: fixed;
-  top: 50%;
-  right: 50%;
-  margin:0px auto;
-  height: 300px;
-  width: 500px;
+  top: 20px;
+  right: 350px;
+  margin:auto;
+  height: 800px;
+  width: 1000px;
   display:flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: aliceblue;
+  background-color: plum;
   z-index: 1000;
 }
 
 .question {
   font-size: 25px;
   z-index: 1001;
+}
+
+
+.buttons {
+  display:flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
 }
 
