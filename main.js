@@ -7,30 +7,32 @@
 // message.addClass('beautText');
 // var myImg;
 
-$.ajax({
-    method: 'GET',
-    url: 'https://picsum.photos/list',
-    success: function(result) {
-     // result is whatever the URL sends back from the request
-     var random = Math.floor(Math.random() * 1000);
-     var myURL = "https://unsplash.it/1200/800?image=" + result[random]["id"];
+// $.ajax({
+//     method: 'GET',
+//     url: 'https://picsum.photos/list',
+//     success: function(result) {
+//      // result is whatever the URL sends back from the request
+//      var random = Math.floor(Math.random() * 1000);
+//      var myURL = "https://unsplash.it/1200/800?image=" + result[random]["id"];
 
-     document.getElementById('theImg').src = myURL;
-    },
-    error: function(err) {
-     console.log('err');
-    }
-  });
+//      document.getElementById('theImg').src = myURL;
+//     },
+//     error: function(err) {
+//      console.log('err');
+//     }
+//   });
 
 let count = 0;
 
 const shopping = $("[id$='shopping']");
 // const cart =  $("[id*='cart']");
 if (shopping[0]) alert('worked shopping')
-const cartid = $("[id*='hplo']");
-const cartClass = $("[id*='hplo']");
+const cartId = $("[id*='cart']");
+const cartClass = $("[class*='cart']");
+const shoppingId = $("[id*='shopping']");
+const shoppingClass = $("[class*='shopping']");
 // const cart =  $("[id*='cart']");
-if (cart[0]) alert('worked hplogo')
+
 
 // const shopping = $("[id$='hplogo']");
 // // const cart =  $("[id*='cart']");
@@ -60,12 +62,18 @@ function displayPopUp() {
   
   yesButton.addEventListener('click', () => {
     if (count < 1) {
-      question.innerHTML = "are you sure?"
+      question.innerHTML = "Are you sure?"
       count++;
     }
     else {
       window.location.replace("https://www.nerdwallet.com/article/finance/how-to-save-money");
     }
+  })
+
+  noButton.addEventListener('click', () => {
+    popUp.style.backgroundImage = "url('https://i.pinimg.com/originals/42/0e/55/420e553ac05ef62e4b114123e73865a0.gif')";
+    buttons.innerHTML ='';
+    question.innerHTML ='';
   })
 
 
@@ -78,8 +86,9 @@ function displayPopUp() {
   body.appendChild(popUp)
 }
 
-if (window.location.href.includes('amazon.com')) {
-  displayPopUp();
-}
+// if (window.location.href.includes('amazon.com')) {
+  
+// }
 
+if (cartId[0] || cartClass[0] || shoppingId[0] || shoppingClass[0]) displayPopUp();
  
