@@ -4,3 +4,24 @@
     font-weight: bold;
     text-align: center;
   }
+
+  .pop-up {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    margin:0px auto;
+    height: 300px;
+    width: 500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    z-index: 1000;
+  }
+
+  .question {
+    font-size: 25px;
+    z-index: 1001;
+  }
+
+  

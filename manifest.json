@@ -5,7 +5,7 @@
     "permissions": ["scripting"],
     "content_scripts": [
         {
-          "matches": ["http://*/*"],
+          "matches": ["https://www.google.com/*"],
           "js": ["jquery.min.js", "./main.js"],
           "css": ["index.css"]
         }

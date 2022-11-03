@@ -22,7 +22,40 @@
 //     }
 //   });
 
-const shopping = $("[id*='shopping']");
-if (shopping) alert('can you really afford this??')
+const shopping = $("[id$='shopping']");
+// const cart =  $("[id*='cart']");
+if (shopping[0]) alert('worked shopping')
+const cart = $("[id*='hplo']");
+// const cart =  $("[id*='cart']");
+if (cart[0]) alert('worked hplogo')
 
+// const shopping = $("[id$='hplogo']");
+// // const cart =  $("[id*='cart']");
+// if (shopping) console.log(shopping[0])
+
+
+function displayPopUp() {
+  const popUp = document.createElement('div')
+  popUp.classList.add('pop-up');
+ 
+  const question = document.createElement('div');
+  popUp.appendChild(question);
+  question.classList.add('question');
+  question.innerHTML = "are you sure?"
+  
+  const buttons = document.createElement('div');
+  buttons.classList.add('buttons');
+  popUp.appendChild(buttons);
+  
+  const yesButton = document.createElement('button');
+  const noButton = document.createElement('button');
+  buttons.appendChild(yesButton);
+  buttons.appendChild(noButton);
+
+  const body = document.querySelector('body');
+  body.appendChild(popUp)
+}
+
+
+displayPopUp();
  
