@@ -18,10 +18,11 @@
   justify-content: space-evenly;
   align-items: center;
   /* background-image: url("https://i.pinimg.com/originals/42/0e/55/420e553ac05ef62e4b114123e73865a0.gif"); */
-  background-image: url("https://img.freepik.com/free-photo/3d-burning-blue-fire-flame-border_53876-102611.jpg?w=2000");
-  
+  /* background-image: url("https://img.freepik.com/free-photo/3d-burning-blue-fire-flame-border_53876-102611.jpg?w=2000"); */
+  background-image : url('https://wallpaperaccess.com/full/851203.jpg');
   background-color: white;
   z-index: 1000;
+  border-radius: 30px;
   /* cursor: url(./money-gif.png), auto;	 */
   
   /* cursor: move; */
@@ -31,27 +32,31 @@
 }
 
 .question {
-  font-family: 'American Typewriter';
+  font-family: 'Papyrus';
   font-size: 40px;
   z-index: 1001;
-  color: white;
+  color:  #3366ff; 
+  font-weight: 500;
 
 }
 
 
 .noButton {
   margin-left: 32px;
-  font-family: 'American Typewriter';
+  font-family: 'Papyrus';
   font-size: 30px;
-  color: white;
+  color: #3366ff; 
 }
 
 
 .yesButton {
   margin-left: 32px;
-  font-family: 'American Typewriter';
+  font-family: 'Papyrus';
   font-size: 30px;
-  color: white;
+  color: #3366ff; 
 }
 
-
+#image{
+  position:absolute;
+  height: 50px;
+}

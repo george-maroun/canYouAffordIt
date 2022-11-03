@@ -96,6 +96,19 @@ function displayPopUp() {
 
   const body = document.querySelector('body');
   body.appendChild(popUp)
+
+  
+  const cursor = document.createElement('img')
+  cursor.setAttribute('id', 'image')
+  cursor.setAttribute('src', 'https://ca.slack-edge.com/T03TBLG6919-U03TUA1CKA5-f347bb8d1254-512')
+  popUp.appendChild(cursor);
+  body.appendChild(popUp)
+
+
+  $(document).mousemove(function(e){
+    $("#image").css({left:e.pageX/1.5, top:e.pageY});
+  });
+
 }
 
 // if (window.location.href.includes('amazon.com')) {
@@ -104,3 +117,6 @@ function displayPopUp() {
 
 if (cartId[0] || cartClass[0] || shoppingId[0] || shoppingClass[0]) displayPopUp();
  
+
+
+
