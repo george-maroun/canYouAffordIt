@@ -47,17 +47,24 @@ function displayPopUp() {
   buttons.classList.add('buttons');
   popUp.appendChild(buttons);
   
-  const yesButton = document.createElement('button');
-  const noButton = document.createElement('button');
-  noButton.innerHTML = "NO"
-  yesButton.innerHTML = "YES"
+  const yesButton = document.createElement('a');
+  const noButton = document.createElement('a');
+  yesButton.classList.add('yesButton');
+  noButton.classList.add('noButton');
+  noButton.innerHTML = "NO";
+  noButton.href = "https://www.nerdwallet.com/article/finance/how-to-save-money";
+  yesButton.innerHTML = "YES";
   buttons.appendChild(yesButton);
   buttons.appendChild(noButton);
+
+
 
   const body = document.querySelector('body');
   body.appendChild(popUp)
 }
 
+if (window.location.href.includes('amazon.com')) {
+  displayPopUp();
+}
 
-displayPopUp();
  
