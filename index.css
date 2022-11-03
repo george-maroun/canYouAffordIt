@@ -6,6 +6,8 @@
   }
 
 .pop-up {
+  /* position: absolute;
+  top: 10%; */
   position: fixed;
   top: 20px;
   right: 350px;
@@ -30,9 +32,10 @@
 
 .question {
   font-family: 'American Typewriter';
-  font-size: 30px;
+  font-size: 40px;
   z-index: 1001;
   color: white;
+
 }
 
 

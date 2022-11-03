@@ -65,15 +65,23 @@ function displayPopUp() {
       question.innerHTML = "Are you sure?"
       count++;
     }
+    else if (count === 1) {
+      question.innerHTML = "Can you afford it?";
+      count++;
+    }
+    else if (count === 2) {
+      question.innerHTML = "Can you pay off your credit card?";
+      count++;
+    }
     else {
-      window.location.replace("https://www.nerdwallet.com/article/finance/how-to-save-money");
+      popUp.style.backgroundImage = "url('https://i.pinimg.com/originals/42/0e/55/420e553ac05ef62e4b114123e73865a0.gif')";
+      buttons.innerHTML ='';
+      question.innerHTML ='';
     }
   })
 
   noButton.addEventListener('click', () => {
-    popUp.style.backgroundImage = "url('https://i.pinimg.com/originals/42/0e/55/420e553ac05ef62e4b114123e73865a0.gif')";
-    buttons.innerHTML ='';
-    question.innerHTML ='';
+    window.location.replace("https://www.nerdwallet.com/article/finance/how-to-save-money");
   })
 
 
