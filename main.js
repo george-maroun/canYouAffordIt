@@ -49,6 +49,8 @@ function displayPopUp() {
   
   const yesButton = document.createElement('button');
   const noButton = document.createElement('button');
+  noButton.innerHTML = "NO"
+  yesButton.innerHTML = "YES"
   buttons.appendChild(yesButton);
   buttons.appendChild(noButton);
 
